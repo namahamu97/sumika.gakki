@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sumika gakkiawase.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>☆sumika　楽器合わせゲーム☆</h1>
+
+    <h2>メンバーに合った楽器が出るまで引きつづけるのだ！</h2>
+
+    <img class="kataoka" src="kataokakenta.png" alt="kataoka">
+    <img class="ogawa" src="ogawa.png" alt="ogawa">
+    <button class="button1">片岡健太（Vo.）</button>
+    <button class="button2">小川貴之（Key.）</button>
+    <img class="kuroda" src="kuroda.jpg.jpeg" alt="kuroda">
+    <img class="arai" src="arai.png" alt="arai">
+    <button class="button3">黒田隼之介（Gt.）</button>
+    <button class="button4">荒井智之（Dr.）</button>
+
+
+    <h3 class="result"></h3>
+    <h4 class="owari"></h4>
+    <p class="owarigazo"></p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+        const val1 = Math.floor(Math.random() * 4);
+        const val2 = Math.floor(Math.random() * 4);
+        const val3 = Math.floor(Math.random() * 4);
+        const val4 = Math.floor(Math.random() * 4);
+
+        $(".button1").on("click", function () {
+            let val1 = Math.floor(Math.random() * 4);
+            if (val1 == 0) {
+                $(".kataoka").attr('src', "maiku.png")
+                $(".result").text("あたり！")
+                $(".button1").prop('disabled', true)
+            } else if (val1 == 1) {
+                $(".kataoka").attr('src', "keyboard.png")
+                $(".result").text("はずれ…")
+            } else if (val1 == 2) {
+                $(".kataoka").attr('src', "guitar.png")
+                $(".result").text("はずれ…")
+            } else {
+                $(".kataoka").attr('src', "drumset.png")
+                $(".result").text("はずれ…")
+            }
+        })
+
+        $(".button2").on("click", function () {
+            let val2 = Math.floor(Math.random() * 4);
+            if (val2 == 0) {
+                $(".ogawa").attr('src', "maiku.png")
+                $(".result").text("はずれ…")
+            } else if (val2 == 1) {
+                $(".ogawa").attr('src', "keyboard.png")
+                $(".result").text("あたり！")
+                $(".button2").prop('disabled', true)
+            } else if (val2 == 2) {
+                $(".ogawa").attr('src', "guitar.png")
+                $(".result").text("はずれ…")
+            } else {
+                $(".ogawa").attr('src', "drumset.png")
+                $(".result").text("はずれ…")
+            }
+        })
+
+        $(".button3").on("click", function () {
+            let val3 = Math.floor(Math.random() * 4);
+            if (val3 == 0) {
+                $(".kuroda").attr('src', "maiku.png")
+                $(".result").text("はずれ…")
+            } else if (val3 == 1) {
+                $(".kuroda").attr('src', "keyboard.png")
+                $(".result").text("はずれ…")
+            } else if (val3 == 2) {
+                $(".kuroda").attr('src', "guitar.png")
+                $(".result").text("あたり！")
+                $(".button3").prop('disabled', true)
+            } else {
+                $(".kuroda").attr('src', "drumset.png")
+                $(".result").text("はずれ…")
+            }
+        })
+
+        $(".button4").on("click", function () {
+            let val4 = Math.floor(Math.random() * 4);
+            if (val4 == 0) {
+                $(".arai").attr('src', "maiku.png")
+                $(".result").text("はずれ…")
+            } else if (val4 == 1) {
+                $(".arai").attr('src', "keyboard.png")
+                $(".result").text("はずれ…")
+            } else if (val4 == 2) {
+                $(".arai").attr('src', "guitar.png")
+                $(".result").text("はずれ…")
+            } else {
+                $(".arai").attr('src', "drumset.png")
+                $(".result").text("あたり！")
+                $(".button4").prop('disabled', true)
+            }
+        })
+        $(".button1" && ".button2" && ".button3" && ".button4").on("click", function () {
+            var result = $(".button1" && ".button2" && ".button3" && ".button4").prop('disabled');
+            if (result) {
+                $(".owari").text("おめでとう！！全部そろった君は３月３日発売、sumikaのニューアルバム「AMUSIC」を買いに行こう！")
+                $(".owarigazo").html('<img src="AMUSIC.jpg"/>')
+            }
+        })
+    </script>
+
+
+
+
+</body>
+
+</html>
