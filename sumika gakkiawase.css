@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(154, 160, 255);
+}
+
+h1,h2,h3,div,p,h4{
+    text-align: center;
+}
+
+img,button{
+    width: 160px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+h1{
+    font-family: 'Noto Sans JP',sans-serif;
+    color:rgb(0, 17, 75);
+    font-size: 25px;
+}
+
+h3{
+    font-size: 30px;
+    color: brown;
+}
+
+h4{
+    font-family: sans-serif;
+}
+
+h2{
+    font-size: 20px;
+}
